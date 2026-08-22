@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+   
+  </head>
+  <body>
+    <form th:action="@{/student/save}" method="post">
+    
+         <input
+            type="hidden"
+            th:field="*{id}">
+    
+    
+      <label for="name"> Full Name: </label>
+      <input id="name" placeholder="enter your name" type="text" th:field="*{name}" />
+
+      <br />
+      <br />
+
+      <label for="email"> Email: </label>
+      <input
+        id="email"
+        placeholder="enter your email"
+        type="email"
+        name="email"
+      />
+
+      <br />
+      <br />
+
+      <label for="city"> City: </label>
+      <input id="city" placeholder="enter your city" type="text" name="city" />
+
+      <br />
+      <br />
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

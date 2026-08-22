@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Student Form</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+    <h1>Student Form</h1>
+
+    <form
+        th:action="@{/students/save}"
+        th:object="${student}"
+        method="post">
+
+
+        <input
+            type="hidden"
+            th:field="*{id}">
+
+
+        <label>Name</label>
+
+        <input
+            type="text"
+            th:field="*{name}"
+            placeholder="Enter name">
+
+
+        <label>Email</label>
+
+        <input
+            type="text"
+            th:field="*{email}"
+            placeholder="Enter email">
+
+
+        <label>City</label>
+
+        <input
+            type="text"
+            th:field="*{city}"
+            placeholder="Enter city">
+
+
+        <button type="submit">
+            Save Student
+        </button>
+
+    </form>
+
+    <br>
+
+    <a th:href="@{/students}">
+        Back
+    </a>
+
+</div>
+
+</body>
+
+</html>

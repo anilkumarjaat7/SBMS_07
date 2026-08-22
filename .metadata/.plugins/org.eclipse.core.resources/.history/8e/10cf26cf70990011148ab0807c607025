@@ -1,0 +1,33 @@
+<html>
+<head></head>
+<body>
+	
+	 <h1>Student Management System</h1>
+	<a th:href="@{student/new}">Add Student</a>
+
+
+	<table border="black">
+		<tr>
+			<th>ID</th>
+			<th>name</th>
+			<th>email</th>
+			<th>city</th>
+			<th>Action</th>
+
+		</tr>
+
+		<tr th:each="s1 : ${students}">
+			<td th:text="${s1.id}"></td>
+			<td th:text="${s1.name}"></td>
+			<td th:text="${s1.email}"></td>
+			<td th:text="${s1.city}"></td>
+			<td>
+			<a th:href="@{/students/edit/{id}(id = ${student.id})}">Edit</a>
+			
+			<a th:href="@{/students/delete/{id}(id=${student.id})}"></a>
+			</td>
+		</tr>
+
+	</table>
+</body>
+</html>

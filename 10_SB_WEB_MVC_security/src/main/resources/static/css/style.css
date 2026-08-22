@@ -1,0 +1,595 @@
+body {
+
+    font-family: Arial;
+
+    background-color: #f4f4f4;
+
+}
+
+
+.container {
+
+    width: 900px;
+
+    margin: 50px auto;
+
+    background: white;
+
+    padding: 30px;
+
+}
+
+
+h1 {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.btn {
+
+    display: inline-block;
+
+    background: green;
+
+    color: white;
+
+    padding: 10px 15px;
+
+    text-decoration: none;
+
+}
+
+
+.search-form {
+
+    margin: 20px 0;
+
+}
+
+
+.search-form input {
+
+    padding: 10px;
+
+    width: 250px;
+
+}
+
+
+button {
+
+    padding: 10px 15px;
+
+    background: blue;
+
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+}
+
+
+th,
+td {
+
+    border: 1px solid #ddd;
+
+    padding: 12px;
+
+    text-align: left;
+
+}
+
+
+th {
+
+    background: #222;
+
+    color: white;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+.form-container,
+.details-container {
+
+    width: 500px;
+
+    margin: 50px auto;
+
+    background: white;
+
+    padding: 30px;
+
+}
+
+
+.form-container form {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.form-container label {
+
+    margin-top: 10px;
+
+}
+
+
+.form-container input {
+
+    padding: 10px;
+
+    margin-top: 5px;
+
+}
+
+
+.form-container button {
+
+    margin-top: 20px;
+
+    width: 150px;
+
+}
+/* =========================================================
+   SB COACHING INSTITUTE - NEW PAGES STYLES
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #222;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* ---------- NAVBAR ---------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #13315c;
+    color: white;
+    padding: 0 40px;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-brand a {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: #cfd8ff;
+    margin-left: 14px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+}
+
+.btn-nav {
+    background: #ff9800;
+    color: #222 !important;
+    font-weight: bold;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+    background: linear-gradient(135deg, #133366, #1a6fd4);
+    color: white;
+    padding: 90px 30px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0 0 15px;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.92;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    margin-left: 10px;
+}
+
+.btn-lg {
+    padding: 14px 28px;
+    font-size: 1.05rem;
+}
+
+
+/* ---------- PAGE HEADER ---------- */
+
+.page-header {
+    background: linear-gradient(135deg, #1a6fd4, #133366);
+    color: white;
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin: 0 0 8px;
+    color: white;
+}
+
+.page-header p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+
+/* ---------- SECTIONS ---------- */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 30px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 0 0 35px;
+    font-size: 2rem;
+    color: #133366;
+}
+
+.section.narrow {
+    max-width: 800px;
+}
+
+.section.dark {
+    background: #e8eefb;
+    max-width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.alert {
+    background: #e6f4ea;
+    border: 1px solid #34a853;
+    color: #1e4620;
+    border-radius: 8px;
+    padding: 12px 16px;
+    text-align: center;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+
+/* ---------- COURSE CARDS ---------- */
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.course-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.course-banner {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.2rem;
+    background: linear-gradient(135deg, #1a6fd4, #133366);
+    color: white;
+    overflow: hidden;
+}
+
+.course-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.course-body {
+    padding: 18px;
+    flex-grow: 1;
+}
+
+.course-body h2 {
+    margin: 0 0 12px;
+    font-size: 1.4rem;
+}
+
+.course-body h3 {
+    margin: 0 0 12px;
+    font-size: 1.25rem;
+}
+
+.course-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 8px 0;
+}
+
+.price {
+    color: #133366;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 6px 0 0;
+}
+
+.course-actions {
+    padding: 15px 18px;
+    background: #fafbfc;
+    border-top: 1px solid #eee;
+}
+
+.badge {
+    display: inline-block;
+    background: #e8f0fe;
+    color: #133366;
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: 0.8rem;
+    margin: 2px 8px 2px 0;
+}
+
+.badge.yellow {
+    background: #fff3cd;
+    color: #856404;
+}
+
+
+/* ---------- REVIEW CARDS ---------- */
+
+.review-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.review-text {
+    font-size: 1.05rem;
+    margin: 12px 0;
+}
+
+.reviewer {
+    color: #555;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.stars {
+    font-size: 1.1rem;
+    color: #f59e0b;
+}
+
+.review-list {
+    min-width: 0;
+}
+/* ---------- FORMS ---------- */
+
+.form-box label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.form-box textarea {
+    resize: vertical;
+}
+
+.btn-block {
+    width: 100%;
+    text-align: center;
+    margin-top: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-row {
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background: #1a6fd4;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.btn:hover {
+    background: #133366;
+}
+
+.btn-small {
+    padding: 5px 10px;
+    font-size: 0.82rem;
+    margin-right: 4px;
+}
+
+.btn-red {
+    background: #d32f2f;
+}
+
+.btn-red:hover {
+    background: #9a1f1f;
+}
+
+.btn-grey {
+    background: #6c757d;
+}
+
+.btn-grey:hover {
+    background: #4d545a;
+}
+
+
+/* ---------- TWO COLUMN (course details) ---------- */
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+@media (max-width: 800px) {
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    .nav-links a {
+        margin: 0 5px;
+    }
+}
+
+
+/* ---------- DASHBOARD ---------- */
+
+.dash .card {
+    padding: 28px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.actions {
+    white-space: nowrap;
+}
+
+
+/* ---------- ABOUT ---------- */
+
+.about-list {
+    padding-left: 20px;
+}
+
+.about-list li {
+    margin: 8px 0;
+}
+
+.empty-box {
+    text-align: center;
+    color: #555;
+}
+
+.search-form.center-form {
+    max-width: 500px;
+    margin: 0 auto 30px;
+    display: flex;
+    gap: 8px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+    background: #13315c;
+    color: #cfd8ff;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+}

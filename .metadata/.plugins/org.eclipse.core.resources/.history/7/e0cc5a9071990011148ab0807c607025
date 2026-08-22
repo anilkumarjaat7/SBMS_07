@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Students</title>
+<link th:href="@{/css/style.css}"
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Management System</h1>
+
+    <a class="add-btn"
+       th:href="@{/students/new}">
+        Add Student
+    </a>
+
+    <br><br>
+
+    <table>
+
+        <tr>
+
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>Action</th>
+
+        </tr>
+
+
+        <tr th:each="student : ${students}">
+
+            <td th:text="${student.id}">
+                1
+            </td>
+
+            <td th:text="${student.name}">
+                Rahul
+            </td>
+
+            <td th:text="${student.email}">
+                rahul@gmail.com
+            </td>
+
+            <td th:text="${student.city}">
+                Delhi
+            </td>
+
+            <td>
+
+                <a
+                    th:href="@{/students/edit/{id}(id=${student.id})}">
+                    Edit
+                </a>
+
+                |
+
+                <a
+                    th:href="@{/students/delete/{id}(id=${student.id})}">
+                    Delete
+                </a>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+
+</html>

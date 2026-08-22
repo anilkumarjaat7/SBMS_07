@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home | SB Coaching Institute</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<!-- Nav Bar -->
+<nav class="navbar">
+    <div class="nav-brand">
+        <a th:href="@{/}">SB Coaching Institute</a>
+    </div>
+    <div class="nav-links">
+        <a th:href="@{/}">Home</a>
+        <a th:href="@{/courses}">Courses</a>
+        <a th:href="@{/reviews}">Reviews</a>
+        <a th:href="@{/about}">About</a>
+        <a th:href="@{/students}">Students</a>
+        <a class="btn-nav" th:href="@{/dashboard}">Dashboard</a>
+    </div>
+</nav>
+
+
+<div class="container">
+
+    <h1>Student Management System</h1>
+
+
+    <!-- Create Student -->
+
+    <a class="btn"
+       th:href="@{/student/new}">
+
+        Create Student
+
+    </a>
+
+
+    <!-- Search -->
+
+    <form th:action="@{/student/search}"
+          method="get"
+          class="search-form">
+
+        <input type="text"
+               name="name"
+               placeholder="Search student">
+
+        <button type="submit">
+            Search
+        </button>
+
+    </form>
+
+
+    <!-- Student Table -->
+
+    <table>
+
+        <tr>
+
+            <th>ID</th>
+
+            <th>Name</th>
+
+            <th>Email</th>
+
+            <th>City</th>
+
+            <th>Age</th>
+
+            <th>Action</th>
+
+        </tr>
+
+
+        <tr th:each="student : ${students}">
+
+            <td th:text="${student.id}">
+                1
+            </td>
+
+
+            <td th:text="${student.name}">
+                Rahul
+            </td>
+
+
+            <td th:text="${student.email}">
+                rahul@gmail.com
+            </td>
+
+
+            <td th:text="${student.city}">
+                Delhi
+            </td>
+
+
+            <td th:text="${student.age}">
+                25
+            </td>
+
+
+            <td>
+
+                <!-- View -->
+
+                <a th:href="@{/student/{id}(id=${student.id})}">
+                    View
+                </a>
+
+                |
+
+                <!-- Edit -->
+
+                <a th:href="@{/student/edit/{id}(id=${student.id})}">
+                    Edit
+                </a>
+
+                |
+
+                <!-- Delete -->
+
+                <a th:href="@{/student/delete/{id}(id=${student.id})}"
+                   onclick="return confirm('Are you sure?')">
+
+                    Delete
+
+                </a>
+
+            </td>
+
+        </tr>
+
+
+        <!-- No Data -->
+
+        <tr th:if="${#lists.isEmpty(students)}">
+
+            <td colspan="6">
+
+                No Student Found
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</div>
+
+<footer class="footer">
+    <p>&#169; 2026 SB Coaching Institute</p>
+</footer>
+
+</body>
+</html> 

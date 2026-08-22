@@ -1,0 +1,52 @@
+package com.p1.service;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.p1.entity.Inquiry;
+import com.p1.repository.InquiryRepository;
+
+
+
+@Service
+public class InquiryService {
+
+    private final InquiryRepository repository;
+
+
+    public InquiryService(InquiryRepository repository) {
+
+        this.repository = repository;
+    }
+
+
+    // CREATE
+
+    public Inquiry saveInquiry(Inquiry inquiry) {
+
+        if (inquiry.getCreatedDate() == null) {
+
+            inquiry.setCreatedDate(LocalDate.now());
+        }
+
+        return repository.save(inquiry);
+    }
+
+
+    // READ ALL
+
+    public List<Inquiry> getAllInquiries() {
+
+        return repository.findAllByOrderByCreatedDateDesc();
+    }
+
+
+    // DELETE
+
+    public void deleteInquiry(int id) {
+
+        repository.deleteById(id);
+    }
+}

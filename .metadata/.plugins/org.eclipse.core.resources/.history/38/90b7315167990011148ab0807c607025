@@ -1,0 +1,23 @@
+<html>
+<head></head>
+<body>
+	<h1>Hello i am Students</h1>
+	<!-- <p th:text="${name}"></p>
+<p th:text="${age}"></p>
+<p th:text="${city}"></p> -->
+
+	<table border="black">
+		<tr>
+			<th>name</th>
+			<th>email</th>
+			<th>city</th>
+
+		</tr>
+		
+		<tr th:each="student : ${students}">
+		
+		</tr>
+
+	</table>
+</body>
+</html>
