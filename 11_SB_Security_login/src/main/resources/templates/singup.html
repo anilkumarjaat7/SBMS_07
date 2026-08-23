@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home | SB Coaching Institute</title>
+   <!--  <link rel="stylesheet" th:href="@{/css/style.css}"> -->
+</head>
+<body>
+
+<h2>Signup</h2>
+
+<form action="/signup" method="post">
+
+    <label>Name</label>
+    <input type="text" name="name">
+
+    <br><br>
+
+    <label>Email</label>
+    <input type="email" name="email">
+
+    <br><br>
+
+    <label>Password</label>
+    <input type="password" name="password">
+
+    <br><br>
+
+    <select name="role">
+        <option value="USER">USER</option>
+        <option value="ADMIN">ADMIN</option>
+    </select>
+   
+
+    <br><br>
+
+    <button type="submit">
+        Signup
+    </button>
+
+</form>
+
+<br>
+
+<a href="/login">Already have an account? Login</a>
+
+
+</body>
+</html> 

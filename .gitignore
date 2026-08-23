@@ -36,3 +36,4 @@ application-secret.properties
 # Temporary files
 *.tmp
 *.swp
+/.metadata/
